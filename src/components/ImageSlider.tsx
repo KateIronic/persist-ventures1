@@ -7,9 +7,9 @@ interface ImageSliderProps {
 const slideStyles: React.CSSProperties = {
   width: "100%",
   height: "100%",
-  borderRadius: "10px",
   backgroundPosition: "center",
   backgroundSize: "cover",
+  position: "relative",
 };
 
 const dotStyle: React.CSSProperties = {
@@ -43,8 +43,10 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
 
   return (
     <div className="h-full relative">
-      <div style={slideStylesWidthBackground}></div>
-      <div className="flex justify-center text-[#808080]">
+      <div
+        style={slideStylesWidthBackground}
+        className="bg-black opacity-80"></div>
+      <div className="flex justify-center text-[#808080] relative z-10">
         {images.map((_, slideIndex) => (
           <div
             key={slideIndex}
