@@ -1,0 +1,64 @@
+import React, { useEffect, useState } from "react";
+
+interface ImageSliderProps {
+  images: string[];
+}
+
+const slideStyles: React.CSSProperties = {
+  width: "100%",
+  height: "100%",
+  borderRadius: "10px",
+  backgroundPosition: "center",
+  backgroundSize: "cover",
+};
+
+const dotStyle: React.CSSProperties = {
+  margin: "0 3px",
+  cursor: "pointer",
+  fontSize: "20px",
+};
+
+const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const next = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex + 1 < images.length ? prevIndex + 1 : 0
+    );
+  };
+
+  useEffect(() => {
+    const timer = setInterval(next, 5000);
+    return () => clearInterval(timer);
+  }, [currentIndex]);
+
+  const goToSlide = (slideIndex: number) => {
+    setCurrentIndex(slideIndex);
+  };
+
+  const slideStylesWidthBackground = {
+    ...slideStyles,
+    backgroundImage: `url(${images[currentIndex]})`,
+  };
+
+  return (
+    <div className="h-full relative">
+      <div style={slideStylesWidthBackground}></div>
+      <div className="flex justify-center text-[#808080]">
+        {images.map((_, slideIndex) => (
+          <div
+            key={slideIndex}
+            style={{
+              ...dotStyle,
+              color: slideIndex === currentIndex ? "#FFFFFF" : "#808080",
+            }}
+            onClick={() => goToSlide(slideIndex)}>
+            ●
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ImageSlider;
