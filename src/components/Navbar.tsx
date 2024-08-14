@@ -25,7 +25,7 @@ const Navbar = () => {
         text={"Get The App"}
         onClick={dummyFunction}
         className={
-          "font-poppins text-sm text-white h-[41px] min-w-[126px] border-[1px] rounded-3xl"
+          "font-poppins text-sm text-white h-[41px] min-w-[126px] border-[1px] rounded-3xl bg-[#808080]"
         }
       />
     </div>

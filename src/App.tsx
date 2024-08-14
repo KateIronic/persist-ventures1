@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Main from "./components/Main";
 import CardScrollable from "./components/CardScrollable";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <CardScrollable title="OvaDrive" />
         <CardScrollable title="Careers" />
         <CardScrollable title="Our Team" />
+        <Footer />
       </div>
     </React.Fragment>
   );
