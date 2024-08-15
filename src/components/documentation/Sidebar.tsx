@@ -64,7 +64,7 @@ const Sidebar: React.FC = () => {
     }
   };
   return (
-    <div className="h-screen w-[370px] text-white p-4 flex flex-col border-[#808080] border-t-[1px] border-r-[1px] rounded-tr-3xl mt-10 relative">
+    <div className="h-screen w-[50%] text-white p-4 flex flex-col border-[#808080] border-t-[1px] border-r-[1px] rounded-tr-3xl mt-[2%] relative">
       <div className="mb-4">
         <input
           type="text"

@@ -6,10 +6,12 @@ import Main from "./documentation/Main";
 const App = () => {
   return (
     <React.Fragment>
-      <div className="relative top-10">
+      <div className="mt-[2%]">
         <Navbar />
-        <Sidebar />
-        <Main />
+        <div className="flex justify-center items-center">
+          <Sidebar />
+          <Main />
+        </div>
       </div>
     </React.Fragment>
   );
