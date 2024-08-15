@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./components/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Documentation from "./components/Documentation";
+import Login from "./components/Login";
 
 const App: React.FC = () => {
   return (
@@ -11,10 +12,10 @@ const App: React.FC = () => {
           path="/"
           element={<Home />}
         />
-        {/* <Route
+        <Route
           path="/login"
           element={<Login />}
-        /> */}
+        />
         <Route
           path="/documentation"
           element={<Documentation />}
