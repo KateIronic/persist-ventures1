@@ -5,3 +5,27 @@
 body {
   @apply bg-[#212121];
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #282929;
+  /* color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a600fc;
+  /* color of the scrollbar handle */
+  border-radius: 10px;
+  /* roundness of the scrollbar handle */
+  border: 2px solid #2d2d2d;
+  /* creates padding around the handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #505050;
+  /* color when hovering over the scrollbar handle */
+}

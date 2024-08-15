@@ -1,26 +1,27 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Main from "./components/Main";
-import CardScrollable from "./components/CardScrollable";
-import Footer from "./components/Footer";
+import Home from "./components/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Documentation from "./components/Documentation";
 
-const App = () => {
+const App: React.FC = () => {
   return (
-    <React.Fragment>
-      <div className="relative top-14">
-        <Navbar />
-        <Hero />
-        <Main />
-        <CardScrollable title="OvaDrive" />
-        <CardScrollable title="Careers" />
-        <CardScrollable title="Our Team" />
-        <Footer />
-      </div>
-    </React.Fragment>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={<Home />}
+        />
+        {/* <Route
+          path="/login"
+          element={<Login />}
+        /> */}
+        <Route
+          path="/documentation"
+          element={<Documentation />}
+        />
+      </Routes>
+    </Router>
   );
 };
 
 export default App;
-
-//TODO:Hero //TODO:main //TODO:others--boxes

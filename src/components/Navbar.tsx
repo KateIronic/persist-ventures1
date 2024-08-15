@@ -1,4 +1,3 @@
-import React from "react";
 import NavbarItems from "./NavbarItems";
 import CustomButton from "./CustomButton";
 import image from "../assets/logoPV.png";
@@ -14,12 +13,30 @@ const Navbar = () => {
       </div>
       <div className="flex justify-center items-center gap-9">
         {" "}
-        <NavbarItems name="Home" />
-        <NavbarItems name="About Us" />
-        <NavbarItems name="Our Team" />
-        <NavbarItems name="Careers" />
-        <NavbarItems name="Privacy Policy" />
-        <NavbarItems name="Documentation" />
+        <NavbarItems
+          name="Home"
+          to="/"
+        />
+        <NavbarItems
+          name="About Us"
+          to="/"
+        />
+        <NavbarItems
+          name="Our Team"
+          to="/"
+        />
+        <NavbarItems
+          name="Careers"
+          to="/"
+        />
+        <NavbarItems
+          name="Privacy Policy"
+          to="/"
+        />
+        <NavbarItems
+          name="Documentation"
+          to="/documentation"
+        />
       </div>
       <CustomButton
         text={"Get The App"}
